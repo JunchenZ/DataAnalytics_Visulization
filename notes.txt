@@ -1,0 +1,50 @@
+unsupervised learning:
+    given x
+
+    clustering:
+        want to assign labels to each point
+        want few labels
+        want points with same label close together
+
+    k-means clustering:
+        min sigma[cluster c](sigma[i<-c](||pi - c||^2))
+
+    k^n different clustering
+
+    lloyd's algorithm/relaxation:
+        pick initial cluster centers while not "converged"
+        assign points to closest cluster center 
+        move cluster centers to mean position of assigned points
+
+    cd(i, c) = avg distance btw i, points in c
+    a(i) = cd(i, i's cluster)
+    b(i) = cd(i, i's next-closest cluster)
+    silhrouette = (b(i) - a(i)) / max(b(i), a(i))
+
+hierarchical clustering:
+    bottom up
+    "Agglomerative" hierarchical clustering
+
+    put each point in a cluster 
+    while > 1 cluster 
+        merge 2 closest clusters
+
+    “linkage criteria”
+    how to measure distance between clusters
+    take pairwise distance between points 
+            in c1 / c2
+    max -> "max/complete" linkage
+    min -> "min/single" linkage
+    mean -> "average linkage"
+
+    "centroid linkage" -> distance (cluster centers)
+
+    "ward" pick clusters that minimize
+    sigma[cluster c](sigma[i<-c](||pi - c||))   (with ^2 ?)
+
+
+
+
+
+
+    
